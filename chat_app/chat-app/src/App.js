@@ -1,14 +1,15 @@
-import ChatList from './components/ChatList/ChatList';
-import ChatText from './components/ChatText/ChatText';
 import './App.css';
+import LoginPage from './components/LoginPage/Login';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<LoginPage/>
+  }
+])
 
 function App() {
-  return (
-    <div className="App">
-      <ChatList></ChatList>
-      <ChatText></ChatText>
-    </div>
-  );
+  return <RouterProvider router={router} ></RouterProvider>
 }
 
 export default App;
